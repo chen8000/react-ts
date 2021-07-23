@@ -1,21 +1,22 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 16:01:24
- * @LastEditTime: 2021-07-23 12:07:20
+ * @LastEditTime: 2021-07-23 16:34:04
  * @LastEditors: zhanghui.chen
  */
 
 import loginBg from "assets/images/bg.png";
 import loginBg2 from "assets/images/bg-left.png";
-import logo from "assets/images/logo.png";
+
 import {
-  BgComponent,
-  FormComponent,
-  FooterInfo,
-  GoLoginDomain,
+  BgComponentStyled,
+  FormComponentStyled,
+  FooterInfoStyled,
+  GoLoginDomainStyled,
 } from "./styled";
 import { DomainLoginComponent } from "./domain-login";
 import { UserLoginComponent } from "./user-login";
+import { LogoComponent } from "components/logo/index";
 import { useState } from "react";
 
 export const LoginComponent = () => {
@@ -29,26 +30,23 @@ export const LoginComponent = () => {
   return (
     <>
       {/* 背景 */}
-      <BgComponent>
+      <BgComponentStyled>
         <img className={"bg1"} src={loginBg} alt="" />
         <img className={"bg2"} src={loginBg2} alt="" />
-      </BgComponent>
+      </BgComponentStyled>
 
       {/* 登陆框 */}
-      <FormComponent>
-        <div className={"header"}>
-          <img src={logo} alt="" />
-          <p>小众软件情报收集平台</p>
-        </div>
+      <FormComponentStyled>
+        <LogoComponent />
         <div className={"content"}>
           {/* 返回按钮 */}
           {domainLogin && (
-            <GoLoginDomain
+            <GoLoginDomainStyled
               className={"radius-2"}
               onClick={() => setDomainLogin(false)}
             >
               <i className={"iconfont icon2fanhui"}></i>
-            </GoLoginDomain>
+            </GoLoginDomainStyled>
           )}
 
           <h3>登录</h3>
@@ -59,9 +57,9 @@ export const LoginComponent = () => {
             <DomainLoginComponent onDomainLoginSuccess={onDomainLoginSuccess} />
           )}
 
-          <FooterInfo>杭州芸品绿信息科技有限公司 V1.0.0</FooterInfo>
+          <FooterInfoStyled>杭州芸品绿信息科技有限公司 V1.0.0</FooterInfoStyled>
         </div>
-      </FormComponent>
+      </FormComponentStyled>
     </>
   );
 };

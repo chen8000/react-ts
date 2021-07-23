@@ -1,13 +1,13 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 16:05:40
- * @LastEditTime: 2021-07-23 12:11:01
+ * @LastEditTime: 2021-07-23 16:33:23
  * @LastEditors: zhanghui.chen
  */
 import styled from "@emotion/styled";
 
 // 背景层
-export const BgComponent = styled.div`
+export const BgComponentStyled = styled.div`
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -25,34 +25,13 @@ export const BgComponent = styled.div`
 `;
 
 // 登陆框
-export const FormComponent = styled.div`
+export const FormComponentStyled = styled.div`
   width: 4.32rem;
   /* height: 5rem; */
   position: absolute;
   right: 3.06rem;
   top: 50%;
   transform: translateY(-50%);
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 0.48rem;
-    }
-    p {
-      margin-bottom: 0;
-      margin-left: 0.1rem;
-      font-size: 0.2rem;
-      background-image: -webkit-linear-gradient(
-        135deg,
-        #978cf5 0%,
-        #79caf3 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
 
   /* content */
   .content {
@@ -100,14 +79,14 @@ export const ButtonStyled = styled.div`
 `;
 
 // 底部信息
-export const FooterInfo = styled.p`
+export const FooterInfoStyled = styled.p`
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.14rem;
   text-align: center;
 `;
 
 // 返回域按钮
-export const GoLoginDomain = styled.div`
+export const GoLoginDomainStyled = styled.div`
   position: absolute;
   top: 0;
   left: 0;

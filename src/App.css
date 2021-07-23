@@ -4,14 +4,3 @@ html body #root .App {
   position: relative;
   line-height: normal;
 }
-.component-relative {
-  position: relative;
-}
-
-.radius-2 {
-  border-radius: 0.02rem;
-}
-.ant-btn,
-.ant-input {
-  border-radius: 0.04rem !important;
-}
