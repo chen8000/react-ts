@@ -1,12 +1,12 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 19:18:29
- * @LastEditTime: 2021-07-22 19:21:06
+ * @LastEditTime: 2021-07-23 11:25:06
  * @LastEditors: zhanghui.chen
  */
 import { Form, Input, Button } from "antd";
 import { InputStyled, ButtonStyled } from "./styled";
-export const UserComponent = () => {
+export const UserLoginComponent = () => {
   return (
     <Form layout={"vertical"}>
       <Form.Item
@@ -17,11 +17,7 @@ export const UserComponent = () => {
         // ]}
       >
         <InputStyled>
-          <Input
-            placeholder={"请输入用户名"}
-            size={"large"}
-            className={"radius"}
-          />
+          <Input placeholder={"请输入用户名"} size={"large"} />
         </InputStyled>
       </Form.Item>
 
@@ -33,24 +29,13 @@ export const UserComponent = () => {
         // ]}
       >
         <InputStyled>
-          <Input
-            placeholder={"请输入密码"}
-            size={"large"}
-            className={"radius"}
-            type={"password"}
-          />
+          <Input placeholder={"请输入密码"} size={"large"} type={"password"} />
         </InputStyled>
       </Form.Item>
 
       <Form.Item className={"domain-btn"}>
         <ButtonStyled>
-          <Button
-            size={"large"}
-            type={"primary"}
-            htmlType={"submit"}
-            block
-            className={"radius"}
-          >
+          <Button size={"large"} type={"primary"} htmlType={"submit"} block>
             登录
           </Button>
         </ButtonStyled>

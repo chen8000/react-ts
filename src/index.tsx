@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 10:41:31
- * @LastEditTime: 2021-07-22 19:24:56
+ * @LastEditTime: 2021-07-23 12:04:56
  * @LastEditors: zhanghui.chen
  */
 import React from "react";
@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import { remJs } from "utils/index";
 import App from "./App";
 import "antd/dist/antd.dark.less";
+import "assets/fonts/iconfont.css";
 remJs(1920);
 
 ReactDOM.render(

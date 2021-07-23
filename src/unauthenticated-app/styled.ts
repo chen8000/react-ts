@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 16:05:40
- * @LastEditTime: 2021-07-22 19:29:13
+ * @LastEditTime: 2021-07-23 12:11:01
  * @LastEditors: zhanghui.chen
  */
 import styled from "@emotion/styled";
@@ -59,6 +59,7 @@ export const FormComponent = styled.div`
     margin-top: 0.4rem;
     background: #092754;
     padding: 0.4rem 0.3rem;
+    position: relative;
 
     h3 {
       color: #fff;
@@ -103,4 +104,23 @@ export const FooterInfo = styled.p`
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.14rem;
   text-align: center;
+`;
+
+// 返回域按钮
+export const GoLoginDomain = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: #fff;
+  transform: translateX(-150%);
+  cursor: pointer;
+  color: #8a8e9d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .iconfont {
+    font-size: 0.15rem;
+  }
 `;
