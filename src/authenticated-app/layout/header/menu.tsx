@@ -1,12 +1,15 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-23 18:06:51
- * @LastEditTime: 2021-07-23 19:36:42
+ * @LastEditTime: 2021-07-27 17:18:34
  * @LastEditors: zhanghui.chen
  */
 import { Menu } from "antd";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router";
 export const MenuComponent = () => {
+  const location = useLocation();
+
   const menu = [
     { path: "/", label: "首页" },
     { path: "/task", label: "任务管理" },
@@ -27,7 +30,7 @@ export const MenuComponent = () => {
     <Menu
       theme="dark"
       mode="horizontal"
-      defaultSelectedKeys={[menu[0].path || "/home"]}
+      defaultSelectedKeys={[location.pathname]}
     >
       {menu.map((item) =>
         item.path ? (
