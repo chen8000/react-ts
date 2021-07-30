@@ -1,27 +1,32 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 10:41:31
- * @LastEditTime: 2021-07-23 16:58:50
+ * @LastEditTime: 2021-07-29 18:34:39
  * @LastEditors: zhanghui.chen
  */
-import React from "react";
-import ReactDOM from "react-dom";
-import reportWebVitals from "./reportWebVitals";
-import { remJs } from "utils/index";
 import App from "./App";
 import "antd/dist/antd.dark.less";
 import "assets/fonts/iconfont.css";
 import "assets/style/transition.less";
 import "assets/style/cover.less";
 import "assets/style/common.less";
+import "moment/locale/zh-cn";
+import React from "react";
+import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
+import { remJs } from "utils/index";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "store";
 remJs(1920);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

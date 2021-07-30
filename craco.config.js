@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 11:53:05
- * @LastEditTime: 2021-07-23 18:00:58
+ * @LastEditTime: 2021-07-29 14:05:29
  * @LastEditors: zhanghui.chen
  */
 const CracoAntDesignPlugin = require("craco-antd");
@@ -30,6 +30,10 @@ module.exports = {
           "@avatar-bg": "#222948",
           "@dropdown-menu-bg": "#191F3A",
           "@menu-dark-item-hover-bg": "rgba(255,255,255,.08)",
+          "@component-background": "#181c32",
+          "@picker-date-hover-range-color": "rgba(151,140,245,.2)",
+          "@picker-bg": "#222948",
+          "@picker-basic-cell-disabled-bg": "rgba(211,211,211,.1)",
         },
       },
     },

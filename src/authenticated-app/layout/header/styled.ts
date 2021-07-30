@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-23 16:37:27
- * @LastEditTime: 2021-07-23 17:51:13
+ * @LastEditTime: 2021-07-27 20:43:10
  * @LastEditors: zhanghui.chen
  */
 import styled from "@emotion/styled";
@@ -20,7 +20,7 @@ export const LayoutLogoStyled = styled.div`
 
 // select-user
 export const LayoutHeaderRightStyled = styled.div`
-  width: 2.6rem;
+  width: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

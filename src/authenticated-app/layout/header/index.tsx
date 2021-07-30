@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-23 18:02:51
- * @LastEditTime: 2021-07-23 18:14:46
+ * @LastEditTime: 2021-07-30 17:35:48
  * @LastEditors: zhanghui.chen
  */
 import { LogoComponent } from "components/logo";
@@ -10,6 +10,7 @@ import { LayoutLogoStyled, LayoutHeaderRightStyled } from "./styled";
 import { MenuComponent } from "./menu";
 import { DomainListComponent } from "./domainList";
 import { UserComponent } from "./user";
+import { DatePickerComponent } from "./datepicker";
 
 const { Header } = Layout;
 export const HeaderComponent = () => {
@@ -24,6 +25,8 @@ export const HeaderComponent = () => {
       <MenuComponent />
       {/* user  ｜  select */}
       <LayoutHeaderRightStyled>
+        {/* 时间选项 */}
+        <DatePickerComponent />
         {/* 域列表 */}
         <DomainListComponent />
         {/* 用户 */}

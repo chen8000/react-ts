@@ -1,14 +1,20 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-23 18:12:30
- * @LastEditTime: 2021-07-23 18:14:08
+ * @LastEditTime: 2021-07-30 17:53:46
  * @LastEditors: zhanghui.chen
  */
 
 import { Dropdown, Avatar, Menu } from "antd";
 import { DropdownContentStyled } from "./styled";
 import { UserOutlined } from "@ant-design/icons";
+import { useSelector } from "react-redux";
+import { RootReducer } from "./types";
 export const UserComponent = () => {
+  const username = useSelector<
+    RootReducer,
+    RootReducer["RootState"]["username"]
+  >((state) => state.RootState.username);
   return (
     <DropdownContentStyled>
       <Avatar icon={<UserOutlined />} />
@@ -22,7 +28,7 @@ export const UserComponent = () => {
         trigger={["click"]}
       >
         <div className={"user-dropdown"}>
-          admin <i className={"iconfont iconxiala1"}></i>
+          {username} <i className={"iconfont iconxiala1"}></i>
         </div>
       </Dropdown>
     </DropdownContentStyled>
