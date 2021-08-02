@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-27 16:48:42
- * @LastEditTime: 2021-07-27 19:00:59
+ * @LastEditTime: 2021-08-02 18:42:46
  * @LastEditors: zhanghui.chen
  */
 import styled from "@emotion/styled";
@@ -16,7 +16,7 @@ export const TaskHeaderStyled = styled.div`
   .item {
     flex: 1;
     background: #1e233f;
-    height: 4rem;
+    height: 3.6rem;
     border-radius: 0.05rem;
     margin-right: 0.24rem;
     padding: 0.24rem;
