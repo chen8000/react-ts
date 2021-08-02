@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-30 18:40:56
- * @LastEditTime: 2021-08-02 16:08:40
+ * @LastEditTime: 2021-08-02 19:25:56
  * @LastEditors: zhanghui.chen
  */
 import { CountItems } from "./types";
@@ -58,7 +58,7 @@ export const CountOptions = (items: CountItems[]) => {
       {
         // name: "",
         type: "pie",
-        radius: ["50%", "63%"],
+        radius: ["55%", "70%"],
         avoidLabelOverlap: false,
         itemStyle: {
           // borderRadius: 10,

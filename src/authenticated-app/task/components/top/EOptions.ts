@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 16:47:24
- * @LastEditTime: 2021-08-02 18:49:26
+ * @LastEditTime: 2021-08-02 19:29:40
  * @LastEditors: zhanghui.chen
  */
 
@@ -12,7 +12,6 @@ export const TopOption = (items: TopItemsTypes[]) => {
   let barData: number[] = []; // 进度条数据
   let labelData: object[] = []; // 左侧top1-6 数据
   items.forEach((item) => {
-    bgData.push(100);
     barData.push(item.data);
     labelData.push({
       value: item.label,
@@ -21,11 +20,18 @@ export const TopOption = (items: TopItemsTypes[]) => {
       },
     });
   });
+
+  // 取最大值
+  let maxValue = Math.max(...barData);
+  for (let i = 0; i < barData.length; i++) {
+    bgData.push(maxValue + 100);
+  }
+
   return {
     grid: {
       left: "1%",
-      right: "5%",
-      bottom: "5%",
+      right: "1%",
+      bottom: "0%",
       top: "5%",
       containLabel: true,
     },
@@ -41,23 +47,16 @@ export const TopOption = (items: TopItemsTypes[]) => {
         type: "none",
       },
       formatter: function (params: any) {
-        return (
-          "<span style='margin-top:5px;float:left;display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:rgba(36,207,233,0.9)'></span>" +
-          // params[0].seriesName + ' : ' + Number((params[0].value.toFixed(4) / 10000).toFixed(2)).toLocaleString() + ' <br/>'
-          '<div style="float:left;">' +
-          "类型" +
-          " : " +
-          // newData[params[0].name] +
-          "<br/>" +
-          "人数" +
-          " : " +
-          params[0].value +
-          "<br/>" +
-          "占比 : " +
-          params[0].value +
-          "%" +
-          "</div>"
-        );
+        let formatterData = items[params[0].dataIndex];
+        return `<span style='margin-top:5px;float:left;display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:${formatterData.color}'></span>
+          <div style="float:left;">
+            类型：${formatterData.type}
+            <br/>
+            人数：${formatterData.data}
+            <br/>
+            占比：${formatterData.percent}
+          </div>
+          `;
       },
     },
     //backgroundColor: "rgb(20,28,52)",
