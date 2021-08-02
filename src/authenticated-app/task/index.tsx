@@ -1,13 +1,14 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-23 18:23:14
- * @LastEditTime: 2021-08-02 16:38:04
+ * @LastEditTime: 2021-08-02 19:32:18
  * @LastEditors: zhanghui.chen
  */
 
 import { TaskContainerStyled, TaskHeaderStyled } from "./styled";
 import { CountComponent } from "./components/count";
 import { TopComponent } from "./components/top";
+import { ActiveComponent } from "./components/active";
 
 export const TaskPage = () => {
   return (
@@ -61,7 +62,9 @@ export const TaskPage = () => {
         <div className={"item"}>
           <TopComponent />
         </div>
-        <div className={"item"}>4</div>
+        <div className={"item"}>
+          <ActiveComponent />
+        </div>
       </TaskHeaderStyled>
       {/* list */}
       <div></div>
