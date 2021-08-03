@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 10:41:31
- * @LastEditTime: 2021-07-29 18:34:39
+ * @LastEditTime: 2021-08-03 15:20:54
  * @LastEditors: zhanghui.chen
  */
 import App from "./App";
@@ -11,6 +11,7 @@ import "assets/style/transition.less";
 import "assets/style/cover.less";
 import "assets/style/common.less";
 import "moment/locale/zh-cn";
+import "default-passive-events";
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";

@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-30 19:58:07
- * @LastEditTime: 2021-08-02 11:34:25
+ * @LastEditTime: 2021-08-03 15:09:58
  * @LastEditors: zhanghui.chen
  */
 import * as echarts from "echarts";
@@ -9,6 +9,7 @@ import { PropsT } from "./types";
 import { useEffect, useState } from "react";
 export const useChart = ({ chartRef, options }: PropsT) => {
   const [myChart, setMyChart] = useState<echarts.EChartsType>();
+
   useEffect(() => {
     const chart = echarts.getInstanceByDom(chartRef.current as HTMLDivElement);
 

@@ -15,6 +15,7 @@
     "@types/react-dom": "^17.0.0",
     "antd": "^4.16.8",
     "craco-antd": "^1.19.0",
+    "default-passive-events": "^2.0.0",
     "echarts": "^5.1.2",
     "history": "5.0.0",
     "lodash": "^4.17.21",

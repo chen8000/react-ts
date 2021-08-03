@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 16:37:04
- * @LastEditTime: 2021-08-02 19:30:18
+ * @LastEditTime: 2021-08-03 15:10:09
  * @LastEditors: zhanghui.chen
  */
 import { TitleStyled } from "../common/styled";
@@ -12,7 +12,7 @@ import { TopOption } from "./EOptions";
 import { EChartsOption } from "echarts";
 
 export const TopComponent = () => {
-  const chartRef = useRef<HTMLDivElement | null>(null);
+  const chartRef = useRef(null);
 
   let items = [
     {

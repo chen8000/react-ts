@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-27 18:00:05
- * @LastEditTime: 2021-08-02 16:43:00
+ * @LastEditTime: 2021-08-03 15:10:32
  * @LastEditors: zhanghui.chen
  */
 import { CountStyled, ChartContainerStyled } from "./styled";
@@ -14,7 +14,7 @@ import { EChartsOption } from "echarts";
 import { TitleStyled } from "../common/styled";
 
 export const CountComponent = ({ data, showTotal }: CountPropsTypes) => {
-  const chartRef = useRef<HTMLDivElement | null>(null);
+  const chartRef = useRef(null);
 
   // 渲染echarts
   useChart({

@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 16:47:24
- * @LastEditTime: 2021-08-02 19:29:40
+ * @LastEditTime: 2021-08-03 15:06:31
  * @LastEditors: zhanghui.chen
  */
 
@@ -70,11 +70,9 @@ export const TopOption = (items: TopItemsTypes[]) => {
         inverse: true,
         axisLabel: {
           show: true,
-          textStyle: {
-            color: (params: any) => {
-              let itemColor = items.filter((item) => item.label === params);
-              return itemColor[0].color;
-            },
+          color: (params: any) => {
+            let itemColor = items.filter((item) => item.label === params);
+            return itemColor[0].color;
           },
         },
         splitLine: {
@@ -95,16 +93,11 @@ export const TopOption = (items: TopItemsTypes[]) => {
         axisLine: "none",
         show: true,
         axisLabel: {
-          textStyle: {
-            color: (data: any) => {
-              let dataColor = items.filter(
-                (item) => item.data === Number(data)
-              );
-              return dataColor[0].color;
-            },
-
-            fontSize: 14,
+          color: (data: any) => {
+            let dataColor = items.filter((item) => item.data === Number(data));
+            return dataColor[0].color;
           },
+          fontSize: 14,
           formatter: function (value: string | number) {
             let typeValue = items.filter((item) => item.data === Number(value));
             return `${typeValue[0].type}  ${typeValue[0].data}`;
@@ -120,11 +113,9 @@ export const TopOption = (items: TopItemsTypes[]) => {
         itemStyle: {
           height: 10,
           fontSize: 20,
-          normal: {
-            barBorderRadius: 2,
-            color: (params: any) => {
-              return items[params.dataIndex].color;
-            },
+          borderRadius: 2,
+          color: (params: any) => {
+            return items[params.dataIndex].color;
           },
         },
         barWidth: 12,
@@ -136,10 +127,8 @@ export const TopOption = (items: TopItemsTypes[]) => {
         barGap: "-100%",
         data: bgData,
         itemStyle: {
-          normal: {
-            color: "#1B375E",
-            barBorderRadius: 0,
-          },
+          color: "#1B375E",
+          borderRadius: 0,
         },
       },
     ],
