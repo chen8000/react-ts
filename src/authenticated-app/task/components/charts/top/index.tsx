@@ -1,10 +1,10 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 16:37:04
- * @LastEditTime: 2021-08-03 15:10:09
+ * @LastEditTime: 2021-08-03 16:37:29
  * @LastEditors: zhanghui.chen
  */
-import { TitleStyled } from "../common/styled";
+import { TitleStyled } from "../../common/styled";
 import { TopStyled } from "./styled";
 import { useRef } from "react";
 import { useChart } from "customHooks/chart";

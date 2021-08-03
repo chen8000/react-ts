@@ -1,27 +1,22 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-27 16:48:42
- * @LastEditTime: 2021-08-03 11:43:48
+ * @LastEditTime: 2021-08-03 16:33:36
  * @LastEditors: zhanghui.chen
  */
 import styled from "@emotion/styled";
 
 export const TaskContainerStyled = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
 `;
 
-export const TaskHeaderStyled = styled.div`
-  display: flex;
-  .item {
-    flex: 1;
-    background: #1e233f;
-    height: 3.9rem;
-    border-radius: 0.05rem;
-    margin-right: 0.24rem;
-    padding: 0.24rem;
-  }
-  .item:last-child {
-    margin-right: 0;
-  }
+// 表格container
+export const TaskTableContainerStyled = styled.div`
+  flex: 1;
+  background: #1e233f;
+  margin-top: 0.24rem;
+  border-radius: 0.04rem;
+  padding: 0.24rem;
 `;

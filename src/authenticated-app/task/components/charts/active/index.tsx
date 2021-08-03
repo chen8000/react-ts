@@ -1,11 +1,11 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 19:31:27
- * @LastEditTime: 2021-08-03 16:14:41
+ * @LastEditTime: 2021-08-03 16:37:22
  * @LastEditors: zhanghui.chen
  */
 
-import { TitleStyled } from "../common/styled";
+import { TitleStyled } from "../../common/styled";
 import { ActiveStyled, ItemsContainerStyled } from "./styled";
 import { ActiveItem } from "./components/item";
 import { EChartsOption } from "echarts";

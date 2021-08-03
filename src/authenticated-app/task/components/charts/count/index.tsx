@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-27 18:00:05
- * @LastEditTime: 2021-08-03 15:10:32
+ * @LastEditTime: 2021-08-03 16:38:29
  * @LastEditors: zhanghui.chen
  */
 import { CountStyled, ChartContainerStyled } from "./styled";
@@ -11,7 +11,7 @@ import { useRef } from "react";
 import { CountOptions } from "./EOptions";
 import { useChart } from "customHooks/chart";
 import { EChartsOption } from "echarts";
-import { TitleStyled } from "../common/styled";
+import { TitleStyled } from "../../common/styled";
 
 export const CountComponent = ({ data, showTotal }: CountPropsTypes) => {
   const chartRef = useRef(null);
