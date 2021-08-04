@@ -1,11 +1,11 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-03 14:15:18
- * @LastEditTime: 2021-08-03 16:14:17
+ * @LastEditTime: 2021-08-04 18:46:37
  * @LastEditors: zhanghui.chen
  */
 import { useRef } from "react";
-import { useChart } from "customHooks/chart";
+import { useChart } from "customHooks";
 import { EChartsOption } from "echarts";
 import { ItemStyled, ItemSubTitle, ItemContainer, ItemValue } from "./styled";
 import { ItemPropsTypes } from "../types";

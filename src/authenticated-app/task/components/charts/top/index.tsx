@@ -1,13 +1,13 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 16:37:04
- * @LastEditTime: 2021-08-03 16:37:29
+ * @LastEditTime: 2021-08-04 18:46:50
  * @LastEditors: zhanghui.chen
  */
 import { TitleStyled } from "../../common/styled";
 import { TopStyled } from "./styled";
 import { useRef } from "react";
-import { useChart } from "customHooks/chart";
+import { useChart } from "customHooks";
 import { TopOption } from "./EOptions";
 import { EChartsOption } from "echarts";
 

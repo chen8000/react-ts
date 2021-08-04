@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-27 18:00:05
- * @LastEditTime: 2021-08-03 16:38:29
+ * @LastEditTime: 2021-08-04 18:46:45
  * @LastEditors: zhanghui.chen
  */
 import { CountStyled, ChartContainerStyled } from "./styled";
@@ -9,7 +9,7 @@ import { CountPropsTypes } from "./types";
 import { useRef } from "react";
 
 import { CountOptions } from "./EOptions";
-import { useChart } from "customHooks/chart";
+import { useChart } from "customHooks";
 import { EChartsOption } from "echarts";
 import { TitleStyled } from "../../common/styled";
 

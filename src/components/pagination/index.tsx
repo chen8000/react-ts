@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-04 12:13:39
- * @LastEditTime: 2021-08-04 17:34:51
+ * @LastEditTime: 2021-08-04 19:51:45
  * @LastEditors: zhanghui.chen
  */
 import { Pagination, Input } from "antd";
@@ -29,6 +29,7 @@ export const PaginationComponent = (position: PaginationPropsTypes) => {
       val = pageSize;
     }
     setcurrentVal(Number(val));
+    position.onChange && position.onChange(Number(val), pageSize);
     setInputValue("");
   };
 
