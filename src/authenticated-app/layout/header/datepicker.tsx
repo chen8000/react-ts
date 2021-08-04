@@ -1,11 +1,10 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-27 20:34:14
- * @LastEditTime: 2021-07-30 17:46:29
+ * @LastEditTime: 2021-08-03 18:36:35
  * @LastEditors: zhanghui.chen
  */
 import { DatePicker } from "antd";
-import locale from "antd/es/date-picker/locale/zh_CN";
 import moment from "moment";
 import { useState, useEffect } from "react";
 import { setRootDate } from "store/root/actions";
@@ -32,7 +31,6 @@ export const DatePickerComponent = () => {
   return (
     <>
       <RangePicker
-        locale={locale}
         format={dateFormat}
         allowClear={false}
         disabledDate={(current) => current && current > moment().endOf("day")}

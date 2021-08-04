@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 11:53:05
- * @LastEditTime: 2021-07-29 14:05:29
+ * @LastEditTime: 2021-08-04 16:49:24
  * @LastEditors: zhanghui.chen
  */
 const CracoAntDesignPlugin = require("craco-antd");
@@ -13,9 +13,31 @@ module.exports = {
       options: {
         customizeTheme: {
           "@primary-color": "#978CF5",
+          // primary 按钮
           "@btn-primary-bg": "linear-gradient(135deg, #79CAF3, #978CF5)",
-          "@input-bg": "#0F3265",
-          "@input-border-color": "#0F3265",
+          // default 按钮【下载.导出】<Button><Button>
+          "@btn-default-color": "#A09EEA",
+          "@btn-default-bg": "rgba(160, 158, 234, 0.1)",
+          "@btn-default-border": "rgba(160, 158, 234, 0)",
+
+          // danger ghost 按钮【表格操作按钮】<Button danger ghost></Button>
+          "@btn-danger-color": "#A09EEA",
+          "@btn-danger-border": "#A09EEA",
+          // --
+          // table
+          "@table-bg": "rgba(0,0,0,0)",
+          "@table-header-bg": "rgba(0,0,0,0)",
+          "@table-row-hover-bg": "#202645",
+          "@table-border-color": "rgba(0,0,0,0)",
+          "@table-header-color": "#A1ACBB",
+          "@table-font-size": ".14rem",
+
+          // pagination 分页
+          "@pagination-item-bg": "#222948",
+
+          // --
+          "@input-bg": "#222948",
+          "@input-border-color": "#222948",
           "@input-color": "#fff",
           "@input-hover-border-color": "rgba(151,140,245,.6)",
           "@layout-body-background": "#181c32",
@@ -34,6 +56,7 @@ module.exports = {
           "@picker-date-hover-range-color": "rgba(151,140,245,.2)",
           "@picker-bg": "#222948",
           "@picker-basic-cell-disabled-bg": "rgba(211,211,211,.1)",
+          "@label-color": "#8A8E9D",
         },
       },
     },

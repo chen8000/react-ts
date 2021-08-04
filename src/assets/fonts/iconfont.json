@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15192655",
+      "name": "搜索",
+      "font_class": "sousuo1",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
       "icon_id": "9509963",
       "name": "上涨",
       "font_class": "shangzhang",

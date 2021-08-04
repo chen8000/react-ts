@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 10:41:31
- * @LastEditTime: 2021-08-03 15:20:54
+ * @LastEditTime: 2021-08-03 18:36:16
  * @LastEditors: zhanghui.chen
  */
 import App from "./App";
@@ -11,7 +11,8 @@ import "assets/style/transition.less";
 import "assets/style/cover.less";
 import "assets/style/common.less";
 import "moment/locale/zh-cn";
-import "default-passive-events";
+import locale from "antd/es/locale/zh_CN";
+import { ConfigProvider } from "antd";
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -25,7 +26,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <ConfigProvider locale={locale}>
+          <App />
+        </ConfigProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

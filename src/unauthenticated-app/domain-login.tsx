@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 19:03:46
- * @LastEditTime: 2021-07-23 12:01:38
+ * @LastEditTime: 2021-08-03 16:59:24
  * @LastEditors: zhanghui.chen
  */
 import { Form, Input, Button } from "antd";
@@ -19,7 +19,11 @@ export const DomainLoginComponent = ({
     <Form layout={"vertical"}>
       <Form.Item label={"域"} name={"domain"}>
         <InputStyled>
-          <Input placeholder={"请输入用户名"} size={"large"} />
+          <Input
+            className={"login-input"}
+            placeholder={"请输入用户名"}
+            size={"large"}
+          />
         </InputStyled>
       </Form.Item>
 

@@ -7,6 +7,15 @@
   height: 100vh;
 }
 
+// btn
+.icon-btn {
+  display: flex;
+  .iconfont {
+    display: inline-block;
+    margin-right: .05rem;
+  }
+}
+
 /* layout-header */
 .ant-layout-header {
   display: flex;
@@ -32,3 +41,41 @@
   background: #181c32;
 }
 
+// input
+.login-input {
+  background-color: #0F3265;
+  border-color: #0F3265;
+}
+
+// 表格 table
+.ant-table {
+  color: #A1ACBB;
+}
+.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  display: none;
+}
+
+// checkbox
+.ant-checkbox-inner {
+  border-color: #778CA2;
+}
+
+
+// 分页
+.ant-pagination-item {
+  border-color: #222948;
+}
+.ant-pagination-item-active {
+  border-color: #978CF5;
+}
+.ant-pagination-prev .ant-pagination-item-link, 
+.ant-pagination-next .ant-pagination-item-link {
+  border-color: #222948;
+  background: #222948;
+}
+.ant-pagination-disabled{
+  
+  .ant-pagination-item-link:hover {
+    border-color: #222948;
+  }
+}

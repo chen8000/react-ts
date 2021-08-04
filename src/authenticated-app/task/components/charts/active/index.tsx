@@ -1,14 +1,13 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-02 19:31:27
- * @LastEditTime: 2021-08-03 16:37:22
+ * @LastEditTime: 2021-08-03 16:39:50
  * @LastEditors: zhanghui.chen
  */
 
 import { TitleStyled } from "../../common/styled";
 import { ActiveStyled, ItemsContainerStyled } from "./styled";
 import { ActiveItem } from "./components/item";
-import { EChartsOption } from "echarts";
 export const ActiveComponent = () => {
   // 活跃
   const activeData = {
