@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 11:53:05
- * @LastEditTime: 2021-08-04 16:49:24
+ * @LastEditTime: 2021-08-05 18:07:03
  * @LastEditors: zhanghui.chen
  */
 const CracoAntDesignPlugin = require("craco-antd");
@@ -18,22 +18,39 @@ module.exports = {
           // default 按钮【下载.导出】<Button><Button>
           "@btn-default-color": "#A09EEA",
           "@btn-default-bg": "rgba(160, 158, 234, 0.1)",
-          "@btn-default-border": "rgba(160, 158, 234, 0)",
+          "@btn-default-border": "transparent",
 
-          // danger ghost 按钮【表格操作按钮】<Button danger ghost></Button>
-          "@btn-danger-color": "#A09EEA",
-          "@btn-danger-border": "#A09EEA",
+          // ghost 按钮【表格操作按钮】<Button ghost></Button>
+          "@btn-default-ghost-color": "#A09EEA",
+          "@btn-default-ghost-border": "#A09EEA",
+
+          // danger 弹窗确定按钮
+          "@btn-danger-bg": "#9493F5",
+
+          // 下载模版button  原生button
+          // <button type="button" className="download-btn">xxxx</button>
+
           // --
           // table
-          "@table-bg": "rgba(0,0,0,0)",
-          "@table-header-bg": "rgba(0,0,0,0)",
+          "@table-bg": "transparent",
+          "@table-header-bg": "transparent",
           "@table-row-hover-bg": "#202645",
-          "@table-border-color": "rgba(0,0,0,0)",
+          "@table-border-color": "transparent",
           "@table-header-color": "#A1ACBB",
           "@table-font-size": ".14rem",
 
           // pagination 分页
           "@pagination-item-bg": "#222948",
+
+          // modal 弹窗
+          "@modal-header-bg": "#1B1E2C",
+          "@modal-content-bg": "#1B1E2C",
+          "@modal-footer-bg": "#1B1E2C",
+          "@modal-header-border-width": "0",
+          "@modal-footer-border-width": "0",
+          "@modal-footer-padding-vertical": ".24rem",
+          "@modal-footer-padding-horizontal": ".24rem",
+          "@modal-header-padding": ".24rem",
 
           // --
           "@input-bg": "#222948",

@@ -46,6 +46,41 @@
   background-color: #0F3265;
   border-color: #0F3265;
 }
+.form-input,
+.form-input .ant-input
+ {
+  background-color: transparent;
+  border-color: rgba(255,255,255,.2);
+}
+
+// select
+.form-select:not(.ant-select-customize-input) 
+  .ant-select-selector {
+    background-color: transparent;
+    border-color: rgba(255,255,255,.2);
+  }
+
+// upload
+.form-upload {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  border-radius: .04rem;
+  border: 1px solid rgba(255,255,255,.2);
+  // overflow: hidden;
+  .ant-upload {
+    width: 100%;
+  }
+  .ant-input {
+    cursor: pointer;
+    caret-color: transparent;
+  }
+  .ant-upload-list {
+    display: none;
+  }
+}
+
 
 // 表格 table
 .ant-table {
@@ -60,6 +95,36 @@
 .ant-empty-img-simple-path {
   fill: #181c32;
 }
+
+// modal 里的table
+.template-table {
+  .ant-table.ant-table-small thead > tr > th,
+  .ant-table {
+    background: transparent;
+  }
+  .ant-table tbody > tr > td,
+  .ant-table.ant-table-small thead > tr > th {
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+  }
+  .ant-table tbody > tr:last-child > td {
+    border-bottom: 0;
+  }
+  .ant-table.ant-table-bordered .ant-table-container {
+    border: 1px solid rgba(255, 255, 255, .1);
+  }
+  .ant-table tbody > tr.ant-table-row:hover > td{
+    background: transparent;
+  }
+  .ant-table-thead > tr > th,
+  .ant-table {
+    color: rgba(255, 255, 255, .3);
+  }
+  
+}
+
+
+
+
 
 
 // checkbox
@@ -85,4 +150,19 @@
   .ant-pagination-item-link:hover {
     border-color: #222948;
   }
+}
+
+// form 
+.ant-form-item-label > label {
+  padding-right: .04rem;
+}
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+  position: absolute;
+  right: 0;
+}
+
+
+// message
+.ant-message-custom-content {
+  color: #fff;
 }
