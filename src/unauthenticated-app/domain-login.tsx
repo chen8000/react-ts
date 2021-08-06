@@ -1,12 +1,13 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 19:03:46
- * @LastEditTime: 2021-08-03 16:59:24
+ * @LastEditTime: 2021-08-06 15:16:33
  * @LastEditors: zhanghui.chen
  */
-import { Form, Input, Button } from "antd";
+import { Form, Button } from "antd";
 import { InputStyled, ButtonStyled } from "./styled";
 import { DomainLoginTypes } from "./types";
+import { LoginInput } from "components";
 export const DomainLoginComponent = ({
   onDomainLoginSuccess,
 }: DomainLoginTypes) => {
@@ -19,7 +20,7 @@ export const DomainLoginComponent = ({
     <Form layout={"vertical"}>
       <Form.Item label={"域"} name={"domain"}>
         <InputStyled>
-          <Input
+          <LoginInput
             className={"login-input"}
             placeholder={"请输入用户名"}
             size={"large"}

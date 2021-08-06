@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-04 19:26:55
- * @LastEditTime: 2021-08-05 18:19:59
+ * @LastEditTime: 2021-08-06 11:06:52
  * @LastEditors: zhanghui.chen
  */
 import {
@@ -11,7 +11,7 @@ import {
   TableContainer,
 } from "./styled";
 import { Form, Input, Select, Button, Table, Dropdown, Menu } from "antd";
-import { PaginationComponent as Pagination } from "components/pagination";
+import { PaginationComponent as Pagination } from "components";
 import { TableItemsTypes } from "./types";
 import { useTr } from "customHooks";
 import { useRef, useEffect, useState } from "react";

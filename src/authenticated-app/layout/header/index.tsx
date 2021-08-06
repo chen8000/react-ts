@@ -1,10 +1,10 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-23 18:02:51
- * @LastEditTime: 2021-07-30 17:35:48
+ * @LastEditTime: 2021-08-06 11:06:12
  * @LastEditors: zhanghui.chen
  */
-import { LogoComponent } from "components/logo";
+import { LogoComponent } from "components";
 import { Layout } from "antd";
 import { LayoutLogoStyled, LayoutHeaderRightStyled } from "./styled";
 import { MenuComponent } from "./menu";

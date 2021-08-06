@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-05 15:24:26
- * @LastEditTime: 2021-08-05 18:21:54
+ * @LastEditTime: 2021-08-06 11:31:08
  * @LastEditors: zhanghui.chen
  */
 import styled from "@emotion/styled";
@@ -60,7 +60,7 @@ export const TemplateContainer = styled.div`
   .template-table {
     flex: 10;
   }
-  button {
+  .download-btn {
     flex: 1;
     margin-left: 0.24rem;
     align-self: flex-end;

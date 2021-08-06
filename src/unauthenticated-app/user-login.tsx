@@ -1,11 +1,12 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 19:18:29
- * @LastEditTime: 2021-08-03 17:00:53
+ * @LastEditTime: 2021-08-06 15:16:53
  * @LastEditors: zhanghui.chen
  */
-import { Form, Input, Button } from "antd";
+import { Form, Button } from "antd";
 import { InputStyled, ButtonStyled } from "./styled";
+import { LoginInput } from "components";
 export const UserLoginComponent = () => {
   return (
     <Form layout={"vertical"}>
@@ -17,7 +18,7 @@ export const UserLoginComponent = () => {
         // ]}
       >
         <InputStyled>
-          <Input
+          <LoginInput
             className={"login-input"}
             placeholder={"请输入用户名"}
             size={"large"}
@@ -33,7 +34,7 @@ export const UserLoginComponent = () => {
         // ]}
       >
         <InputStyled>
-          <Input
+          <LoginInput
             className={"login-input"}
             placeholder={"请输入密码"}
             size={"large"}

@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 16:01:24
- * @LastEditTime: 2021-07-23 16:34:04
+ * @LastEditTime: 2021-08-06 15:16:10
  * @LastEditors: zhanghui.chen
  */
 
@@ -16,7 +16,7 @@ import {
 } from "./styled";
 import { DomainLoginComponent } from "./domain-login";
 import { UserLoginComponent } from "./user-login";
-import { LogoComponent } from "components/logo/index";
+import { LogoComponent } from "components";
 import { useState } from "react";
 
 export const LoginComponent = () => {

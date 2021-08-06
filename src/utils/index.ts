@@ -1,7 +1,7 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-07-22 16:34:21
- * @LastEditTime: 2021-08-04 18:40:33
+ * @LastEditTime: 2021-08-06 16:15:37
  * @LastEditors: zhanghui.chen
  */
 
@@ -49,4 +49,51 @@ export const getElemTop = (elem: HTMLDivElement) => {
     elem = elem.offsetParent as HTMLDivElement;
   }
   return elemTop;
+};
+
+/*
+2. 
+------------------------------------------------------
+|
+|   1-100 进度
+|     inter(
+|       // 第一个数组里是卡住的数字节点
+|       // 第二个数组是速度
+|       // [[32, 55, 63, 71, 85, 98], [100, 300, 160, 100, 50, 700]],
+|       s => {
+|         // s 是数字
+|         this.loadingNum = s;
+|       },
+|       () => {
+|         // 100 %
+|         this.hideShow();
+|       }
+|     );
+|
+------------------------------------------------------
+*/
+
+export const inter = (
+  arr: number[][],
+  s: (s: number) => void,
+  callback?: () => void
+) => {
+  let t: NodeJS.Timeout,
+    num = 0,
+    speedNum = 20;
+  let interval = () => {
+    num++;
+    s(num);
+    let index = arr[0].findIndex((value) => value === num);
+    if (index >= 0) {
+      clearInterval(t);
+      t = setInterval(interval, arr[1][index]);
+    }
+    // 停止
+    if (num === 60) {
+      clearInterval(t);
+      callback && callback(); // 回调函数
+    }
+  };
+  t = setInterval(interval, speedNum);
 };

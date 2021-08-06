@@ -1,20 +1,10 @@
 /*
  * @Author: zhanghui.chen
  * @Date: 2021-08-05 12:23:11
- * @LastEditTime: 2021-08-05 19:35:58
+ * @LastEditTime: 2021-08-06 16:38:28
  * @LastEditors: zhanghui.chen
  */
-import {
-  Modal,
-  Button,
-  Form,
-  Input,
-  Select,
-  Upload,
-  Table,
-  message,
-  Progress,
-} from "antd";
+import { Modal, Button, Form, Select } from "antd";
 import { useState } from "react";
 import { CreateModalTypes } from "./types";
 import {
@@ -23,33 +13,37 @@ import {
   CreateContainer,
   TemplateContainer,
 } from "./styled";
-import { RemarkComponent } from "components/remark";
 import { useForm } from "antd/es/form/Form";
+import {
+  TemplateTable,
+  RemarkComponent,
+  DownloadButton,
+  CreateUpload,
+  FormInput,
+} from "components";
 
 const { Item } = Form;
 
 export const CreateTaskComponent = ({ children }: CreateModalTypes) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [addNumberState, setAddNumberState] = useState("one"); // 默认选中多个
-  const [uploadValue, setUploadValue] = useState("点击上传文件");
   const [form] = useForm();
-
-  // 上传中、完成、失败都会调用这个函数。
-  const onUploadChange = (info: any) => {
-    if (info.file.status !== "uploading") {
-      console.log(info.file, info.fileList);
-    }
-    if (info.file.status === "done") {
-      setUploadValue(info.file.name);
-      message.success(`${info.file.name} 上传成功`);
-    } else if (info.file.status === "error") {
-      message.error(`${info.file.name} 上传失败`);
-    }
-  };
 
   // 提交数据
   const onSubmit = () => {
     console.log(form.getFieldsValue());
+  };
+
+  // 上传中、完成、失败都会调用这个函数。
+  const onUploadChange = (info: any) => {
+    if (info.file.status !== "uploading") {
+      // console.log(info.file, info.fileList);
+    }
+    if (info.file.status === "done") {
+      // message.success(`${info.file.name} 上传成功`);
+    } else if (info.file.status === "error") {
+      // message.error(`${info.file.name} 上传失败`);
+    }
   };
 
   return (
@@ -69,7 +63,6 @@ export const CreateTaskComponent = ({ children }: CreateModalTypes) => {
         focusTriggerAfterClose={false}
         maskClosable={false}
         closeIcon={<i className={"iconfont iconguanbi"} />}
-        onOk={() => setIsModalVisible(false)}
         onCancel={() => setIsModalVisible(false)}
         title={
           <CustomTitle>
@@ -92,7 +85,7 @@ export const CreateTaskComponent = ({ children }: CreateModalTypes) => {
               label="任务名称"
               rules={[{ required: true }]}
             >
-              <Input className={"form-input"} placeholder="请输入任务名称" />
+              <FormInput placeholder="请输入任务名称" />
             </Item>
             <Item
               name="add_number"
@@ -114,37 +107,29 @@ export const CreateTaskComponent = ({ children }: CreateModalTypes) => {
                 label="电话号码"
                 rules={[{ required: true }]}
               >
-                <Input className={"form-input"} placeholder="请输入电话号码" />
+                <FormInput placeholder="请输入电话号码" />
               </Item>
             )}
 
             <Item label="备注" name="remark">
-              <Input className={"form-input"} placeholder="备注可为空" />
+              <FormInput placeholder="备注可为空" />
             </Item>
             {addNumberState === "many" && (
               <Item label="上传文件">
-                <Upload
+                {/* upload */}
+                <CreateUpload
                   name="file"
                   action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-                  headers={{ authorization: "authorization-text" }}
-                  onChange={onUploadChange}
-                  className={"form-upload"}
                   maxCount={1}
-                >
-                  <Input
-                    className={"form-input"}
-                    placeholder={uploadValue}
-                    suffix={<i className={"iconfont icondakaiwenjian"} />}
-                  />
-                  <Progress showInfo={false} percent={30} />
-                </Upload>
+                  onChange={onUploadChange}
+                />
+
                 <RemarkComponent style={{ marginTop: ".1rem" }}>
                   *
                   仅备注可为空；上传表格的表头需严格遵循以下格式，只支持xls/xlsx/csv文件，上传时系统默认从第2行开始导入数据。
                 </RemarkComponent>
                 <TemplateContainer>
-                  <Table
-                    className={"template-table"}
+                  <TemplateTable
                     dataSource={[
                       { key: "1", number: "(918) 321-0953", remark: "重点" },
                       { key: "2", number: "(837) 321-7390", remark: "-" },
@@ -162,18 +147,19 @@ export const CreateTaskComponent = ({ children }: CreateModalTypes) => {
                     bordered
                     size={"small"}
                   />
-                  <button type="button" className={"download-btn"}>
-                    下载模版
-                  </button>
+                  <DownloadButton>下载模版</DownloadButton>
                 </TemplateContainer>
               </Item>
             )}
+            {/* <div onClick={onSubmit}></div> */}
             <Item>
               <BtnGroup>
                 <Button type="primary" danger onClick={onSubmit}>
                   确定
                 </Button>
-                <Button ghost>取消</Button>
+                <Button ghost onClick={() => setIsModalVisible(false)}>
+                  取消
+                </Button>
               </BtnGroup>
             </Item>
           </Form>
